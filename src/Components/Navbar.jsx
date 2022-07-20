@@ -28,7 +28,6 @@ export default function Navbar() {
       <Flex gap="10px" alignItems="center" h="100%">
         <Text style={{ cursor: "pointer" }}>
           <Button
-            class="btn btn-primary"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasWithBothOptions"
@@ -50,12 +49,12 @@ export default function Navbar() {
               <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
                 Backdrop with scrolling
               </h5>
-              <button
+              <Button
                 type="button"
                 class="btn-close"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
-              ></button>
+              ></Button>
             </div>
             <div class="offcanvas-body">
               <p>
