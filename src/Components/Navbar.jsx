@@ -177,17 +177,17 @@ export default function Navbar() {
       <Spacer />
       <Flex alignItems="center" justifyContent="space-around" gap="32">
         <Link to="#">
-          <Heading fontSize="20px">
+          <Heading fontSize="20px" _hover={{ color: "white" }}>
             <b>Become a Host</b>
           </Heading>
         </Link>
         <Link to="#">
-          <Heading fontSize="20px">
+          <Heading fontSize="20px" _hover={{ color: "white" }}>
             <b>ZMS</b>
           </Heading>
         </Link>
         <Link to="/login">
-          <Heading fontSize="20px">
+          <Heading fontSize="20px" _hover={{ color: "white" }}>
             <b>Login/Signup</b>
           </Heading>
         </Link>
