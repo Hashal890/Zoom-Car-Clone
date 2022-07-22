@@ -18,7 +18,10 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import React from "react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import HomeGridOne from "../Components/HomeGridOne";
 import HomeGridTwo from "../Components/HomeGridTwo";
+import HomeGridThree from "../Components/HomeGridThree";
+import AboutUs from "../Components/AboutUs";
 
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -247,7 +250,21 @@ export default function Home() {
             FIND CARS
           </Button>
         </Box>
+        <br />
+        <br />
+        <br />
+        <HomeGridOne />
+        <br />
+        <br />
         <HomeGridTwo />
+        <br />
+        <br />
+        <HomeGridThree />
+        <br />
+        <br />
+        <AboutUs />
+        <br />
+        <br />
       </Box>
       <Footer />
     </Box>
