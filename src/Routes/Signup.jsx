@@ -11,15 +11,14 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  PinInput,
-  PinInputField,
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import { useState } from "react";
-import { GetData, PostData } from "../Components/Api";
+import React, { useState } from "react";
+import { PostData } from "../Components/Api";
+import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const modal1 = useDisclosure();
@@ -28,17 +27,18 @@ export default function Signup() {
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [password, setPassword] = useState("");
-  const [OTP, setOtp] = useState("");
-  const [canMoveNext, setCanMoveNext] = useState(true);
-  const regex = new RegExp("^(?:([1-5])(?!.*\\1))*$");
-  const handleChange = (e) => {
-    if (!regex.test(e)) {
-      setCanMoveNext(false);
-      return;
-    }
-    setCanMoveNext(true);
-    setOtp(e);
-  };
+  const [pin, setPin] = useState("");
+  const navigate = useNavigate();
+  let tempOtp =
+    Math.floor(Math.random() * 10) +
+    "" +
+    Math.floor(Math.random() * 10) +
+    "" +
+    Math.floor(Math.random() * 10) +
+    "" +
+    Math.floor(Math.random() * 10) +
+    "";
+  let setTimeoutID;
   return (
     <Box>
       <Navbar />
@@ -143,6 +143,10 @@ export default function Signup() {
                     .then((res) => console.log(res))
                     .catch((err) => console.log(err));
                   modal2.onOpen();
+                  if (setTimeoutID) clearTimeout(setTimeoutID);
+                  setTimeoutID = setTimeout(() => {
+                    alert(`Your OTP IS ${tempOtp}`);
+                  }, 1000);
                 }}
               >
                 Continue
@@ -154,18 +158,13 @@ export default function Signup() {
                   <ModalCloseButton />
                   <ModalBody>
                     <br />
-                    <PinInput
-                      placeholder="🔒"
-                      type="number"
-                      manageFocus={canMoveNext}
-                      value={OTP}
-                      onChange={handleChange}
-                    >
-                      <PinInputField />
-                      <PinInputField />
-                      <PinInputField />
-                      <PinInputField />
-                    </PinInput>
+                    <Input
+                      placeholder="Enter OTP"
+                      onChange={(e) => setPin(e.target.value)}
+                    />
+                    <br />
+                    <br />
+                    <br />
                   </ModalBody>
                   <ModalFooter>
                     <Button colorScheme="blue" mr={3} onClick={modal2.onClose}>
@@ -173,11 +172,13 @@ export default function Signup() {
                     </Button>
                     <Button
                       onClick={() => {
-                        if (OTP === "" || OTP.length !== 4)
+                        if (pin === "" || pin.length !== 4)
                           alert("Please enter valid otp!");
                         else {
                           alert("Verification completed!");
                           modal2.onClose();
+                          modal1.onClose();
+                          navigate("/");
                         }
                       }}
                       variant="ghost"
