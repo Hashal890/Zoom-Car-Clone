@@ -1,3 +1,39 @@
+# Zoomcar Clone
+
+Hello everyone, I'm Harshal Pardeshi builded a clone of `https://zoomcar.com/` in my construct week of Unit-4 at Masai School.
+
+
+## Features
+
+- Homepage with links to various sections
+- Login & signup pages with random otp feature and modal
+- Offcanas to left side
+- Help & support pages having popular queries
+- Policy pages
+
+
+## Tech Stack
+
+In this project we used following tech stacks:- 
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+- [React](https://reactjs.org/)
+- [Chakra UI](https://chakra-ui.com/getting-started)
+
+
+## Connect with author
+
+- [Twitter](https://twitter.com/harshal258)
+- [LinkdIn](https://www.linkedin.com/in/harshalpardeshi/)
+
+
+## Feedback
+
+If you have any feedback or queries, please reach out to us at pardeshiharshal90@gmail.com.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
