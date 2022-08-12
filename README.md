@@ -6,7 +6,7 @@ Hello everyone, I'm Harshal Pardeshi builded a clone of `https://zoomcar.com/` i
 ## Features
 
 - Homepage with links to various sections.
-- Login & signup pages with random otp feature and modal
+- Login & signup pages with random otp feature and modal.
 - Offcanas to left side
 - Help & support pages having popular queries
 - Policy pages
