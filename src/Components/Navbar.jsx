@@ -7,10 +7,13 @@ import {
   Spacer,
   Text,
 } from "@chakra-ui/react";
+// import { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../Assets/logo.png";
+// import AuthContext from "../Context/AuthContext";
 
 export default function Navbar() {
+  // const [isAuth, toggleIsAuth] = useContext(AuthContext);
   return (
     <Flex
       h="70px"
@@ -186,11 +189,15 @@ export default function Navbar() {
             <b>ZMS</b>
           </Heading>
         </Link>
-        <Link to="/login">
-          <Heading fontSize="20px" _hover={{ color: "white" }}>
-            <b>Login/Signup</b>
-          </Heading>
-        </Link>
+        {/* {isAuth ? (
+          <Button onClick={toggleIsAuth}>Logout</Button>
+        ) : ( */}
+          <Link to="/login">
+            <Heading fontSize="20px" _hover={{ color: "white" }}>
+              <b>Login/Signup</b>
+            </Heading>
+          </Link>
+        {/* )} */}
       </Flex>
     </Flex>
   );

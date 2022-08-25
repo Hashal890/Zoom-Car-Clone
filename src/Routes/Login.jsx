@@ -10,8 +10,6 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  PinInput,
-  PinInputField,
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -130,6 +128,7 @@ export default function Login() {
                     <Input
                       placeholder="Enter your password"
                       onChange={(e) => setPass(e.target.value)}
+                      type="password"
                     />
                   </ModalBody>
                   <ModalFooter>
@@ -143,9 +142,9 @@ export default function Login() {
                         else {
                           GetData(mbNum)
                             .then((res) => {
-                              if (pass == "" || res.data[0].password != pass)
+                              if (pass === "" || res.data[0].password !== pass)
                                 alert("Please enter valid password!");
-                              else if (res.data[0].password == pass) {
+                              else if (res.data[0].password === pass) {
                                 alert("Login successfull!");
                                 modal2.onClose();
                                 modal1.onClose();

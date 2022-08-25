@@ -168,7 +168,7 @@ export default function Signup() {
                   </ModalBody>
                   <ModalFooter>
                     <Button colorScheme="blue" mr={3} onClick={modal2.onClose}>
-                      Close
+                      Go Back
                     </Button>
                     <Button
                       onClick={() => {
