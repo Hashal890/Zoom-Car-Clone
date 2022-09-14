@@ -5,6 +5,7 @@ import Signup from "./Signup";
 import FleetPolicies from "./FleetPolicies";
 import HostPolicies from "./HostPolicies";
 import HelpAndSupport from "./HelpAndSupport";
+import PickCity from "./PickCity";
 
 export default function AllRoutes() {
   return (
@@ -16,6 +17,7 @@ export default function AllRoutes() {
         <Route path="/fleetpolicy" element={<FleetPolicies />} />
         <Route path="/hostpolicy" element={<HostPolicies />} />
         <Route path="/helpandsupport" element={<HelpAndSupport />} />
+        <Route path="/pickupcity" element={<PickCity />} />
       </Routes>
     </div>
   );
