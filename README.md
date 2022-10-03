@@ -12,6 +12,20 @@ Hello everyone, I'm Harshal Pardeshi builded a clone of `https://zoomcar.com/` i
 - Policy pages.
 
 
+## Screenshots
+
+### 1. Home Page
+![Home Page](./src/Assets/homePage.png)
+### 2. Login Page
+![Login Page](./src/Assets/loginPage.png)
+### 3. Signup Page
+![Signup Page](./src/Assets/signupPage.png)
+### 4. Policies Page
+![Policies Page](./src/Assets/policiesPage.png)
+### 5. Help and support Page
+![Help and support Page](./src/Assets/helpSupportPage.png)
+
+
 ## Tech Stack
 
 In this project we used following tech stacks:- 
